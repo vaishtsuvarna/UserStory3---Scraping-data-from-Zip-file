@@ -97,12 +97,12 @@ def validate_csv(df: pd.DataFrame) -> bool:
         if col not in df_columns_lower:
             logger.error(f"Missing required column: {col}")
             return False
-    logger.info("CSV validation PASSED")
+    logger.info("CSV validation passed")
     return True
 
 def process_clean_data(df: pd.DataFrame) -> Optional[pd.DataFrame]:
     try:
-        logger.info("Starting data cleaning...")
+        logger.info("Starting data cleaning")
       
         df_clean = df.copy()
         
@@ -167,4 +167,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
